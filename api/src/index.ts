@@ -1,8 +1,9 @@
 import express, { Request, Response } from "express";
+import cors from "cors";
+const PORT = 3005;
 
 const app = express();
-
-const PORT = 3005;
+app.use(cors());
 
 app.get("/", (request: Request, response: Response) => { 
   response.status(200).send("Hello World");
