@@ -1,4 +1,4 @@
-const listings = [
+export const listings = [
   {
     id: "a0s0800000DhdCJAAZ",
     area: "166,745 sf",
