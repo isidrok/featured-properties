@@ -1,12 +1,13 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
+import {listings} from "./listings.repository";
 const PORT = 3005;
 
 const app = express();
 app.use(cors());
 
-app.get("/", (request: Request, response: Response) => { 
-  response.status(200).send("Hello World");
+app.get("/listings", (request: Request, response: Response) => { 
+  response.status(200).json(listings);
 }); 
 
 app.listen(PORT, () => { 
